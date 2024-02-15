@@ -31,6 +31,9 @@ set(SDL2_INCLUDE_DIR ${SOURCE_DIR}/include)
 # Add all .cc files in the src directory to the SOURCES variable
 file(GLOB SOURCES src/*.cc)
 
+# Include the directory containing header files
+include_directories(include)
+
 # Add the include directory to the target
 add_executable(MyGame ${SOURCES})
 target_include_directories(MyGame PRIVATE ${SDL2_INCLUDE_DIR})
