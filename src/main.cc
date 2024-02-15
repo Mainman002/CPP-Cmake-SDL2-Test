@@ -1,5 +1,8 @@
 #include <SDL.h>
 
+#include "math.hpp"
+#include <iostream>
+
 int main(int argc, char* argv[]) {
     // Initialize SDL2
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
@@ -39,6 +42,10 @@ int main(int argc, char* argv[]) {
 
     // Update the window
     SDL_RenderPresent(renderer);
+
+    // Math module test
+    double result = percentage(10.0, 100.0, 0.5);
+    std::cout << "Result: " << result << std::endl;
 
     // Event loop
     bool quit = false;

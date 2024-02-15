@@ -28,8 +28,11 @@ ExternalProject_Add(SDL2
 ExternalProject_Get_Property(SDL2 SOURCE_DIR)
 set(SDL2_INCLUDE_DIR ${SOURCE_DIR}/include)
 
+# Add all .cc files in the src directory to the SOURCES variable
+file(GLOB SOURCES src/*.cc)
+
 # Add the include directory to the target
-add_executable(MyGame src/main.cc)
+add_executable(MyGame ${SOURCES})
 target_include_directories(MyGame PRIVATE ${SDL2_INCLUDE_DIR})
 
 # Link SDL2 library
