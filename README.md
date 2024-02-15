@@ -7,11 +7,7 @@ A project made to test sdl2 with cmake
 * g++
 * SDL2
 
-## To setup this project create 2 folders
-* bin
-* include
-
-then run a terminal and type these commands
+## To compile this project run a terminal and type these commands
 ```
 cd bin
 cmake ..
